@@ -187,7 +187,7 @@ while True:
     elif value == 't9':
       padog.servo_init(1)
       
-  with open(url_n, 'r') as f:
+  with open(url_n, 'r') as f:   #with用于异常处理 等价于 try: f=open(url_n,'r')   finally:f.close()
     while(req_data.find('speed')>-1 or (req_data.find('f=')==-1 and req_data.find('g0')==-1 and req_data.find('g1')==-1 and req_data.find('sn')==-1 and req_data.find('sf')==-1 and req_data.find('go')==-1 and req_data.find('gc')==-1 and req_data.find('pit=')==-1 and req_data.find('rol=')==-1 and req_data.find('yst=')==-1 and req_data.find('hgt=')==-1)):
       out=f.read(500)
       if out:
